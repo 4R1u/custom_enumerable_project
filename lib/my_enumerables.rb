@@ -35,6 +35,12 @@ module Enumerable
     self.each { |item| count += 1 if yield item }
     count
   end
+
+  def my_map
+    results = []
+    self.my_each { |item| results << yield(item) }
+    results
+  end
 end
 
 # You will first have to define my_each
