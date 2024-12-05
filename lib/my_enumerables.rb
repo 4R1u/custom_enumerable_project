@@ -14,6 +14,11 @@ module Enumerable
     results
   end
 
+  def my_all?
+    self.my_each { |item| return false unless yield item }
+    true
+  end
+
 end
 
 # You will first have to define my_each
