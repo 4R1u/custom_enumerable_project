@@ -7,6 +7,13 @@ module Enumerable
       index += 1
     end
   end
+
+  def my_select
+    results = []
+    self.my_each { |item| results << item if yield item }
+    results
+  end
+
 end
 
 # You will first have to define my_each
